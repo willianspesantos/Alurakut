@@ -1,11 +1,34 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { AlurakutStyles } from '../src/lib/AlurakuComuns'
 
 const GlobalStyle = createGlobalStyle`
-  body {
+/*Reset CSS*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background: #D9E6F6;
+    font-family: sans-serif;
   }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #__next {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  ${AlurakutStyles}
 `
 
 const theme = {
